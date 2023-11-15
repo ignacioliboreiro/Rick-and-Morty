@@ -1,7 +1,8 @@
-export default function Card({name,status,species,gender,origin,image,onClose}) {
+export default function Card({id,name,status,species,gender,origin,image,onClose}) {
    return (
       <div>
-         <button onClick={onClose}>X</button>
+         <button onClick={()=> onClose(id)}>X</button>
+         
          <h2>Name: {name}</h2>
          <h2>Status: {status}</h2>
          <h2>species: {species}</h2>

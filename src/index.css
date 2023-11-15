@@ -27,8 +27,9 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+
+  height: 100vh;
+  background-image: url(https://i.blogs.es/9d1b88/rick-morty/1366_2000.jpeg);
 }
 
 h1 {
