@@ -1,8 +1,8 @@
-.cards{
+.cards {
+    width: 90vw;
     display: flex;
-    justify-content: space-evenly;
     border-radius: 10px;
-    padding: 30px;
+    /* padding: 30px; */
     flex-flow: row wrap;
-    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fotogramas.es%2Fseries-tv-noticias%2Fg36988639%2Frick-y-morty-mejores-capitulos-episodios%2F&psig=AOvVaw1sd2Wd4mXr3ZLlMoDJ9rgs&ust=1700341759590000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNifquX4y4IDFQAAAAAdAAAAABAE);
+    justify-content: space-around;
 }

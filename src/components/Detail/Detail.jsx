@@ -21,7 +21,7 @@ const Detail = () => {
     }, [params?.id]);
 
     return (
-        <div>
+        <div className='detail'>
             <h2>{character?.name}</h2>
             <h2>{character?.status}</h2>
             <h2>{character?.species}</h2>

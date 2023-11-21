@@ -1,20 +1,32 @@
-import { useEffect, useState } from 'react';
+
+//componentes to render//
 import Cards from './components/cards/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx';
-import axios from "axios";
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form.jsx';
+import Favorite from './components/favorite/Favorite.jsx';
+
+//hooks
+import { useEffect, useState } from 'react';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+
+//dependencias//
+import axios from "axios";
+
+//style//
+import "./app.css"
 
 
+const EMAIL = 'nicopaez@gmail.com';
+const PASSWORD = 'hola123'
 
 
 function App() {
 const [characters, setCharacters]=useState([])
 const {pathname} = useLocation()
-console.log(pathname)
-
+const navigate = useNavigate();
+const [access, setAccess] = useState(false);
 
 
 const onSearch = (id)=> {
@@ -37,6 +49,20 @@ const onClose = (id) =>{
    )
 }
 
+
+const  login = (userData) => {
+   if (userData.password === PASSWORD && userData.email === EMAIL) {
+      setAccess(true);
+      navigate('/home');
+   }
+}
+
+useEffect(() => {
+   !access && navigate('/');
+}, [access]);
+
+
+
    return (
       <div className='App'>
          {pathname !== "/" && <NavBar onSearch={onSearch}/>}
@@ -44,7 +70,8 @@ const onClose = (id) =>{
             <Route path='/about' element={<About/>}/>
             <Route path='/home' element={<Cards characters={characters} onClose={onClose} />}/>
             <Route path='/detail/:id' element={<Detail/>}/>
-            <Route path='/' element={<Form/>}/>
+            <Route path='/favorites' element={<Favorite/>}/>
+            <Route path='/' element={<Form login={login}/>}/>
          </Routes>
       </div>
    );

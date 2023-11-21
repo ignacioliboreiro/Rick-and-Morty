@@ -1,88 +1,42 @@
-.card {
-    --bg: #e8e8e8;
-    --contrast: #e2e0e0;
-    --grey: #93a1a1;
-    position: relative;
-    padding: 9px;
-    background-color: var(--bg);
-    border-radius: 35px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
-.card-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
-    filter: opacity(10%) contrast(105%);
-}
-
-.card-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 190px;
-    height: 254px;
-    background-color: var(--contrast);
-    border-radius: 30px;
-    /* Content style */
-    font-size: 30px;
-    font-weight: 900;
-    color: #c7c4c4;
+/*Retro Style Card*/
+h2 {
     text-align: center;
-    font-family: monospace;
 }
 
-
-.boton {
-    --color: #560bad;
-    font-family: inherit;
-    display: inline-block;
-    width: 8em;
-    height: 2.6em;
-    line-height: 2.5em;
+.card {
+    width: 300px;
     margin: 20px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--color);
-    transition: color .5s;
-    z-index: 1;
-    font-size: 17px;
-    border-radius: 6px;
-    font-weight: 500;
-    color: var(--color);
+    background: rgba(132, 169, 182, 0.885);
+    border: 3px solid #000;
+    border-radius: 0;
+    box-shadow: 15px 15px 0 -2.5px rgba(109, 124, 140, 0.723), 15px 15px 0 0 #000;
 }
 
-
-.boton:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: var(--color);
-    height: 150px;
-    width: 200px;
-    border-radius: 50%;
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #ffffff;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: all .5s ease;
+    margin: 5px;
 }
 
-.boton:hover {
-    color: #fff;
+button:hover {
+    letter-spacing: 3px;
+    background-color: #070313;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #eeeeee
 }
 
-.boton:before {
-    top: 100%;
-    left: 100%;
-    transition: all .7s;
-}
-
-.boton:hover:before {
-    top: -30px;
-    left: -30px;
-}
-
-.boton:active:before {
-    background: #3a0ca3;
-    transition: background 0s;
+button:active {
+    letter-spacing: 3px;
+    background-color: hsl(127, 20%, 92%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
 }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import validation from '../validation'
+import "./Form.css"
 
 
 
-
-function Form() {
+function Form({login}) {
     const [userData, setUserData] = useState({
         email: "",
         password: ""
@@ -20,28 +20,45 @@ function Form() {
         setErrors(validation(userData))
     }
 
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        login(userData);
+    }
+
+    useEffect(() => {
+        if(userData.email !== "" || userData.password !== "") {
+        const userValidated = validation(userData);
+        setErrors(userValidated);
+    }
+    },[userData])
+
     return (
-        <div>
-            <form>
-                <label htmlFor="email">Email:</label>
+        <div className='login-box'>
+            <form onSubmit={handleSubmit}>
+            <div class="user-box">
+                <label htmlFor="email"></label>
                 <input
                     type="text"
                     name='email'
-                    placeholder='email'
+                    placeholder='Email:'
                     value={userData.email}
                     onChange={handelChange}
                     />
-                    {errors.email && <p>{errors.email}</p>}
+                    </div>
+                    {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
                 <br />
-                <label htmlFor="passsword">Password:</label>
+                <div class="user-box">
+                
+                <label htmlFor="passsword"></label>
                 <input
                     type="password"
                     name='password'
-                    placeholder='Password'
+                    placeholder='Password:'
                     value={userData.password}
                     onChange={handelChange}
-                />
-                {errors.password && <p>{errors.password}</p>}
+                    />
+                </div>
+                {errors.password && <p style={{color: "red"}}>{errors.password}</p>}
                 <br />
                 <button>Submit</button>
             </form>
