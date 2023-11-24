@@ -62,10 +62,15 @@ useEffect(() => {
 }, [access]);
 
 
+const logout = () => {
+   setAccess(false)
+} 
+
+
 
    return (
       <div className='App'>
-         {pathname !== "/" && <NavBar onSearch={onSearch}/>}
+         {pathname !== "/" && <NavBar onSearch={onSearch} logout={logout}/>}
          <Routes>
             <Route path='/about' element={<About/>}/>
             <Route path='/home' element={<Cards characters={characters} onClose={onClose} />}/>

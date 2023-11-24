@@ -32,7 +32,7 @@ export default function Card({ id, name, status, species, gender, origin, image,
 
 
    return (
-      <div className="card">
+      <div className="cardHome">
          {
             isFav ? (
                <button onClick={handleFavorite}>❤️</button>

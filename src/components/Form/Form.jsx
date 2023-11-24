@@ -47,7 +47,7 @@ function Form({login}) {
                     </div>
                     {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
                 <br />
-                <div class="user-box">
+                <div className="user-box">
                 
                 <label htmlFor="passsword"></label>
                 <input
