@@ -6,7 +6,7 @@ import "./favorite.css"
 function Favorite() {
     const dispatch = useDispatch()
 
-    // const [aux, setAux] = useState(flase);
+    // const [aux, setAux] = useState(flase); 
     const { myFavorites } = useSelector((state) => state)
 
     const handleOrder = (e) => {

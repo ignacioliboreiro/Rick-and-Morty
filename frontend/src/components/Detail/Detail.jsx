@@ -16,7 +16,7 @@ const Detail = () => {
                     window.alert('No hay personajes con ese ID');
                 }
             }
-        );
+        ); 
         return setCharacter({});
     }, [params?.id]);
 

@@ -39,7 +39,7 @@ const onSearch = (id)=> {
          }
       }
    );
-}
+} 
 
 const onClose = (id) =>{
    setCharacters(

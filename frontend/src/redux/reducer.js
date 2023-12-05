@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) => {
         case "FILTER":
             if (action.payload === "All") {
                 return {
-                    ...state,
+                    ...state, 
                     myFavorites: state.allCharacters,
                 };
             }

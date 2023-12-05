@@ -8,7 +8,7 @@ function Form({login}) {
     const [userData, setUserData] = useState({
         email: "",
         password: ""
-    })
+    }) 
 
     const [errors, setErrors] = useState({})
 

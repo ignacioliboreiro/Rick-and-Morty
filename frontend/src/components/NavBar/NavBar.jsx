@@ -5,7 +5,7 @@ import "./NavBarCSS.css"
 
 
 const NavBar = ({onSearch, logout}) => {
-    return (
+    return ( 
         <div className='navbar'>
             <SearchBar onSearch={onSearch} />
             <div>

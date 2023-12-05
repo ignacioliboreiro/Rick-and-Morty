@@ -6,7 +6,7 @@ const validation = (userData) => {
         errors.email = 'Debe ser un correo electrónico';
 
     }
-    if (userData.email === "") {
+    if (userData.email === "") { 
         errors.email = "el campo no puede estar vacio"
     }
     if (userData.email.length > 36) {

@@ -23,7 +23,7 @@ export const removeFav = (id) => {
             });
         });
     };
-};
+}; 
 
 export const filterCards = (gender) => {
     return {

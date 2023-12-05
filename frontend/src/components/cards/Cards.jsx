@@ -18,7 +18,7 @@ const Cards =({characters,onClose}) => {
             onClose={onClose}
             />
          )
-})}
+})} 
       </div>
    )
 }

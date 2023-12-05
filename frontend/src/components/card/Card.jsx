@@ -19,7 +19,7 @@ export default function Card({ id, name, status, species, gender, origin, image,
          setIsFav(true)
          dispatch(addFav({ id, name, status, species, gender, origin, image, onClose}))
       }
-   }
+   } 
 
 
    useEffect(() => {
